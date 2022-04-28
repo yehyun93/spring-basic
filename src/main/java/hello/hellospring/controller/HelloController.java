@@ -21,13 +21,14 @@ public class HelloController {
     }
 
     @GetMapping("hello-string")
-    @ResponseBody //body에 return값을 넣겠다
+    @ResponseBody //body에 문자 내용을 반환
     public String helloString(@RequestParam("name") String name){
         return "hello " + name; //hello spring
     }
 
     @GetMapping("hello-api")
-    @ResponseBody
+    @ResponseBody //viewResolver 대신에 'HttpMessageConverter' 동작
+                  // -> JsonConverter(MappingJackson2HttpMessageConverter)/객체, StringConverter/문자
     public Hello helloApi(@RequestParam("name") String name){
         Hello hello = new Hello();
         hello.setName(name);
