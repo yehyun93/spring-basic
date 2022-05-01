@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service //컨테이너가 서비스 등록
+//@Service //컨테이너가 서비스 등록
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    @Autowired //spring 컨테이너가 생성자 호출 -> spring 컨테이너에 있는 객체를 넣어줌
+    //@Autowired //spring 컨테이너가 생성자 호출 -> spring 컨테이너에 있는 객체를 넣어줌
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
