@@ -20,6 +20,7 @@ public class MemberController {
     public MemberController(MemberService memberService) {
         // spring 컨테이너가 관리하는 service 객체를 넘겨줌
         this.memberService = memberService;
+        System.out.println("memberService.getClass() = " + memberService.getClass());
     }
 
     @GetMapping("/members/new")
